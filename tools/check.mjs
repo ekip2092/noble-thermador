@@ -16,7 +16,7 @@ for (const f of files) {
     if (target && !existsSync(join(SITE, target))) { console.log(`${f}: broken -> ${u}`); bad++; }
   }
   if (/\(800\) 555-0199|8005550199/.test(html)) { console.log(`${f}: stale placeholder phone`); bad++; }
-  if (!html.includes('(747) 444-0000') && f !== 'cities-we-serve.html') { console.log(`${f}: missing brand phone`); bad++; }
+  if (!html.includes('(747) 444-3123') && f !== 'cities-we-serve.html') { console.log(`${f}: missing brand phone`); bad++; }
   // Copy rule: no dashes/hyphens in visible text. Thermador needs no exception.
   const text = html
     .replace(/<script[\s\S]*?<\/script>/g, ' ')

@@ -4,16 +4,13 @@
 // Copy is deliberately worded apart from the Noble Sub-Zero, Noble Viking,
 // and Noble Appliance sites to avoid duplicate content across the domains.
 // Same concepts, unique sentences. Verify with a shingle scan after edits.
-//
-// PHONE IS A PLACEHOLDER — swap BRAND.phone/tel here and the literal in
-// tools/check.mjs when the real tracking number arrives.
 
 export const BRAND = {
   name: 'Noble Thermador Service',
   navName: 'Noble Thermador Appliance Service',
   short: 'Noble',
-  phone: '(747) 444-0000',
-  tel: '+17474440000',
+  phone: '(747) 444-3123',
+  tel: '+17474443123',
   email: 'contact@noblethermadorservice.com',
   domain: 'https://noblethermadorservice.com',
   hours: 'Open daily, 7am to 7pm',
