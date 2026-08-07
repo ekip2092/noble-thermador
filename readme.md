@@ -53,6 +53,6 @@ Premium refrigeration appliance service, presented with museum-gallery restraint
 
 - **Fonts:** SF Pro Display/Text are Apple-proprietary; no font files were provided. The stack leads with `system-ui, -apple-system` (real SF Pro on Apple platforms) and falls back to Inter (Google Fonts, weights 300/400/600/700). Supply licensed font files to replace.
 - **No logo** was provided; the wordmark is plain type. Supply a real mark to replace.
-- **No photography** was provided; the site uses labeled gray placeholder blocks — swap each `.ph` / `.card-ph` div for a real `<img>`.
+- Photography: Thermador renders in place (assets/media, 2026-08-07). Still placeholder: tech portrait/training/truck cards on About, and the problems/contact background videos.
 - Phone (747) 444-3123 is the real business number (in tools/data.mjs BRAND + tools/check.mjs literal).
 - Form validation/error states, hover-state documentation, and dark-mode card variants are undefined in the source spec and intentionally omitted.

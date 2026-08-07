@@ -16,8 +16,8 @@ mkdirSync(join(OUT, 'assets', 'cities'), { recursive: true });
 const cityImg = s => existsSync(join(OUT, 'assets', 'cities', `${s}.jpg`)) ? `assets/cities/${s}.jpg` : null;
 
 // Appliance/lifestyle photography in assets/media (basename without extension).
-// NOTE: current files are placeholders carried over from the sibling builds.
-// Swap in Thermador renders under the same basenames (or update the maps below).
+// Thermador renders supplied by owner 2026-08-07 (Desktop\noble thermador
+// pictures), converted to 1600w jpgs. Update the maps below to reassign.
 const media = n => existsSync(join(OUT, 'assets', 'media', `${n}.jpg`)) ? `assets/media/${n}.jpg` : null;
 const mediaImg = (n, alt, cls = 'city-hero', extra = '') => {
   const src = media(n);
@@ -55,30 +55,30 @@ const heroVideo = base => {
   <div class="hero-scrim"></div>`;
 };
 
-// Hero image per problem page. Placeholder photography until Thermador renders land.
+// Hero image per problem page.
 const PROB_IMG = {
-  'thermador-oven-not-heating': ['wolf-oven-15-door-ajar-roast', 'Professional wall oven with the door ajar'],
-  'thermador-oven-uneven-baking': ['wolf-oven-05-midbake-sourdough', 'Bread baking in a professional convection oven'],
-  'thermador-star-burner-clicking': ['wolf-range-09-black-moody', 'Gas burners on a professional range'],
-  'thermador-oven-door-problems': ['wolf-oven-13-detail-handle', 'Detail of an oven door and handle'],
-  'thermador-refrigerator-not-cooling': ['subzero-fridge-01-pro48-glass-industrial', '48 inch professional refrigerator'],
-  'thermador-refrigerator-leaking-water': ['subzero-fridge-14-detail-stainless-door', 'Stainless refrigerator door up close'],
-  'thermador-ice-maker-repair': ['subzero-fridge-11-door-open-organized', 'Open refrigerator stocked and organized'],
-  'thermador-freezer-not-freezing': ['subzero-fridge-06-36in-column-pair', 'Refrigerator and freezer columns side by side'],
-  'thermador-column-refrigeration-service': ['subzero-fridge-02-panel-oak-columns', 'Panel ready refrigeration columns in oak'],
-  'thermador-condenser-cleaning': ['subzero-fridge-05-walnut-integrated', 'Integrated refrigerator within walnut cabinetry'],
+  'thermador-oven-not-heating': ['thermador-new-walloven-02', 'Thermador wall oven set in a marble wall'],
+  'thermador-oven-uneven-baking': ['thermador-new-walloven-09', 'Thermador wall oven stack midway through a bake'],
+  'thermador-star-burner-clicking': ['thermador-used-range-03', 'Star Burner lit with blue flame on a Thermador rangetop'],
+  'thermador-oven-door-problems': ['thermador-used-range-07', 'Open Thermador oven door with a dish coming out'],
+  'thermador-refrigerator-not-cooling': ['thermador-used-fridge-01', 'Built in Thermador refrigerator in a cream kitchen'],
+  'thermador-refrigerator-leaking-water': ['thermador-used-fridge-05', 'Thermador refrigerator nameplate and handle up close'],
+  'thermador-ice-maker-repair': ['thermador-new-freezer-08', 'Open Thermador freezer column with ice drawers'],
+  'thermador-freezer-not-freezing': ['thermador-new-freezer-01', 'Thermador freezer column in white oak cabinetry'],
+  'thermador-column-refrigeration-service': ['thermador-new-freezer-02', 'Panel ready Thermador column pair in rift oak'],
+  'thermador-condenser-cleaning': ['thermador-used-fridge-07', 'Panel ready Thermador column open in a walnut kitchen'],
 };
 
 // Gallery wall on the homepage.
 const GALLERY = [
-  ['subzero-fridge-10-estate-wide', 'Built in refrigeration in an estate kitchen'],
-  ['wolf-range-03-sage-green-brass', 'Professional range against sage cabinetry'],
-  ['subzero-wine-05-fluted-oak-bar', 'Beverage storage in a fluted oak bar'],
-  ['wolf-oven-01-double-white-oak', 'Twin wall ovens in white oak'],
-  ['subzero-fridge-09-sage-english', 'Refrigeration in an English style kitchen'],
-  ['wolf-range-06-navy-marble', 'Range with navy cabinets and marble'],
-  ['subzero-wine-09-dinner-party', 'Beverage columns during a dinner party'],
-  ['wolf-oven-14-mountain-modern', 'Wall ovens in a modern mountain home'],
+  ['thermador-kitchen-new-11', 'Penthouse kitchen at dusk with Thermador columns'],
+  ['thermador-kitchen-new-02', 'Thermador range under a Calacatta marble hood'],
+  ['thermador-kitchen-new-10', 'Thermador range in a European farmhouse kitchen'],
+  ['thermador-used-fridge-10', 'Thermador refrigerator in a craftsman kitchen'],
+  ['thermador-kitchen-new-03', 'Dark walnut kitchen with a Thermador range'],
+  ['thermador-kitchen-new-13', 'Vineyard estate kitchen with a Thermador range'],
+  ['thermador-kitchen-used-13', 'Evening entertaining around a Thermador kitchen'],
+  ['thermador-kitchen-new-08', 'Thermador range in an industrial loft kitchen'],
 ];
 const cityCardMedia = c => {
   const img = cityImg(c.slug);
@@ -245,7 +245,7 @@ page('index.html', head(
 <section class="tile tile-hero">
   <picture>
     <source media="(max-width: 833px)" srcset="assets/media/hero-mobile.jpg">
-    <img class="hero-bg" src="assets/media/hero-desktop.jpg" alt="Morning in a kitchen under Noble care">
+    <img class="hero-bg" src="assets/media/hero-desktop.jpg" alt="Thermador range beneath a plaster hood in a kitchen under Noble care">
   </picture>
   <div class="hero-scrim"></div>
   <div class="hero-content">
@@ -307,7 +307,7 @@ page('index.html', head(
     <a class="btn btn-wolf" href="problems.html#cooking">What we fix</a>
     <a class="btn btn-ghost-wolf" href="tel:${BRAND.tel}">Call now</a>
   </div>
-  ${mediaImg('wolf-range-15-detail-red-knobs', 'Control knobs on a professional range', 'city-hero ph-shadow', ' style="max-width: 720px; height: 420px; border-radius: 8px;"')}
+  ${mediaImg('thermador-new-range-03', 'Thermador Star Burner lit with blue flame', 'city-hero ph-shadow', ' style="max-width: 720px; height: 420px; border-radius: 8px;"')}
 </section>
 
 <section class="tile tile-dark">
@@ -318,7 +318,7 @@ page('index.html', head(
     <a class="btn btn-primary" href="problems.html#refrigeration">What we fix</a>
     <a class="btn btn-ghost-dark" href="tel:${BRAND.tel}">Call now</a>
   </div>
-  ${mediaImg('subzero-fridge-02-panel-oak-columns', 'Refrigeration columns finished in oak panels', 'city-hero ph-shadow', ' style="max-width: 720px; height: 420px; border-radius: 8px;"')}
+  ${mediaImg('thermador-new-freezer-03', 'Thermador refrigeration columns in a marble wall', 'city-hero ph-shadow', ' style="max-width: 720px; height: 420px; border-radius: 8px;"')}
 </section>
 
 <section class="tile tile-white">
@@ -387,7 +387,7 @@ ${riskTile()}
     <p>House managers, family offices, and property firms keep Noble on standing account because it removes a category of problems from their desk. Every appliance gets a documented history, certificates of insurance arrive on request, our techs carry existing clearances for the gated communities, and invoices arrive shaped for your bookkeeping rather than ours.</p>
     <p>Multiple properties become one calendar under the Noble maintenance plan. Condenser service, gasket and seal inspection, and cooking calibration across every unit you manage, approved once and handled all year.</p>
   </div>
-  ${mediaImg('subzero-wine-04-wine-room-pair', 'Paired columns in a private tasting room', 'city-hero', ' loading="lazy"')}
+  ${mediaImg('thermador-new-freezer-05', 'Integrated Thermador refrigeration beside a glass wine room', 'city-hero', ' loading="lazy"')}
   <div class="ctas">
     <a class="btn btn-primary" href="contact.html">Speak with us</a>
   </div>
@@ -400,20 +400,20 @@ ${riskTile()}
 // Problems hub
 // ---------------------------------------------------------------------------
 const HUB_IMG = {
-  'Oven not heating': ['wolf-oven-15-door-ajar-roast', 'Wall oven, door ajar'],
-  'Uneven baking': ['wolf-oven-05-midbake-sourdough', 'Loaf midway through a bake'],
-  'Burner clicking': ['wolf-range-07-industrial-loft', 'Range burners in a loft kitchen'],
-  'Simmer and flame faults': ['wolf-range-02-60in-walnut-modern', '60 inch professional range'],
-  'Door and hinge trouble': ['wolf-oven-13-detail-handle', 'Oven door handle up close'],
-  'Self clean lockouts': ['wolf-oven-02-single-speed-gray', 'Wall oven control panel'],
-  'Not cooling': ['subzero-fridge-12-condo-french-door', 'French door refrigerator'],
-  'Leaking water': ['subzero-fridge-15-spanish-revival', 'Refrigerator in a Spanish style kitchen'],
-  'Ice maker down': ['subzero-fridge-11-door-open-organized', 'Refrigerator interior, stocked'],
-  'Freezer trouble': ['subzero-fridge-01-pro48-glass-industrial', 'Professional refrigerator with glass door'],
-  'Column care': ['subzero-fridge-06-36in-column-pair', 'Matched refrigeration columns'],
-  'Excess frost': ['subzero-fridge-08-pro48-dusk-glass', 'Glass door refrigeration at dusk'],
-  'Door seal failure': ['subzero-fridge-14-detail-stainless-door', 'Stainless door edge detail'],
-  'Unusual noise': ['subzero-fridge-03-classic-side-by-side', 'Side by side refrigerator'],
+  'Oven not heating': ['thermador-new-walloven-02', 'Thermador wall oven in a marble wall'],
+  'Uneven baking': ['thermador-new-walloven-09', 'Thermador oven stack midway through a bake'],
+  'Burner clicking': ['thermador-used-range-03', 'Lit Star Burner up close'],
+  'Simmer and flame faults': ['thermador-new-range-02', 'Thermador gas range, straight on'],
+  'Door and hinge trouble': ['thermador-used-range-07', 'Open Thermador oven door'],
+  'Self clean lockouts': ['thermador-used-walloven-05', 'Thermador oven control panel up close'],
+  'Not cooling': ['thermador-used-fridge-01', 'Built in Thermador refrigerator'],
+  'Leaking water': ['thermador-used-fridge-05', 'Thermador refrigerator door detail'],
+  'Ice maker down': ['thermador-new-freezer-08', 'Freezer column with ice drawers open'],
+  'Freezer trouble': ['thermador-new-freezer-01', 'Thermador freezer column in white oak'],
+  'Column care': ['thermador-new-freezer-02', 'Panel ready Thermador column pair'],
+  'Excess frost': ['thermador-new-fridge-03', 'Refrigerator and freezer columns open'],
+  'Door seal failure': ['thermador-new-fridge-04', 'Thermador column doors at dusk'],
+  'Unusual noise': ['thermador-used-fridge-08', 'Thermador refrigerator pair in cream cabinetry'],
 };
 const hubCard = i => {
   const im = HUB_IMG[i.title];
@@ -682,7 +682,7 @@ page('about.html', head(
   <p class="eyebrow muted">About</p>
   <h1>Depth over breadth,<br>for ${BRAND.years} years.</h1>
   <p class="lead muted">Spark circuits, sealed refrigeration, convection cavities, control electronics. One category of machine, studied until it stopped keeping secrets.</p>
-  ${mediaImg('wolf-oven-08-estate-paneled', 'Wall ovens in a paneled estate kitchen', 'city-hero', ' loading="lazy"')}
+  ${mediaImg('thermador-new-walloven-10', 'Thermador wall ovens centered in an oak cabinet wall', 'city-hero', ' loading="lazy"')}
 </section>
 
 <section class="tile tile-parchment">
