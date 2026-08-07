@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://noblethermadorservice.com/sitemap.xml
