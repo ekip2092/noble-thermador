@@ -1,5 +1,13 @@
 {
   "outputDirectory": "site",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.noblethermadorservice.com" }],
+      "destination": "https://noblethermadorservice.com/:path*",
+      "permanent": true
+    }
+  ]
 }
