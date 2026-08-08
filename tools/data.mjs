@@ -12,7 +12,7 @@ export const BRAND = {
   phone: '(747) 444-3123',
   tel: '+17474443123',
   email: 'contact@noblethermadorservice.com',
-  domain: 'https://noblethermadorservice.com',
+  domain: 'https://www.noblethermadorservice.com',
   hours: 'Open daily, 7am to 7pm',
   base: 'Los Angeles, CA',
   diagnostic: '$89',
